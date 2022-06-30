@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
  
-void hashfunction(int mytable[], int tsize, int myarr[], int h)
+void hashfunction(int mytable[], int myarr[], int h)
 { 
     int numberofcollision = 0;
     for (int z = 0; z < h; z++) 
@@ -45,6 +45,6 @@ int main()
     {
         hashtable[z] = -1;
     }
-    hashfunction(hashtable, 10, arr, W);
+    hashfunction(hashtable, arr, W);
 
 }
