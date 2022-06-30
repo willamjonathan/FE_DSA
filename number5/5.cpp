@@ -37,13 +37,12 @@ void hashfunction(int mytable[], int myarr[], int h)
 int main()
 {
     int arr[] = {5, 40, 18, 22, 28, 38, 48, 20, 8};
-    int W = 10;
     int hashtable[10];
  
     for (int z = 0; z < 10; z++)
     {
         hashtable[z] = -1;
     }
-    hashfunction(hashtable, arr, W);
+    hashfunction(hashtable, arr, 10);
 
 }
