@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
  
 void hashfunction(int mytable[], int tsize, int myarr[], int h)
@@ -6,7 +6,7 @@ void hashfunction(int mytable[], int tsize, int myarr[], int h)
     int numberofcollision = 0;
     for (int z = 0; z < h; z++) 
     {
-        int d = myarr[z] % tsize; 
+        int d = myarr[z] % 10; 
 
         if (mytable[d] == -1){ 
             mytable[d] = myarr[z];
@@ -15,18 +15,17 @@ void hashfunction(int mytable[], int tsize, int myarr[], int h)
         else 
         {
             numberofcollision ++;
-            cout << "Collide Number " << numberofcollision << endl; 
+            
 
-            for (int x = 0; x < tsize; x++){
-
-                int t = (d + x * x) % tsize; 
+            for (int x = 0; x < 10; x++){
+                int t = (d + x * x) % 10; 
                 if (mytable[t] == -1)
                 {
-
                     mytable[t] = myarr[z]; 
                     break;
                 }
             }
+            cout << "collision number " << numberofcollision << endl; 
         }
     }
 
@@ -39,9 +38,7 @@ void hashfunction(int mytable[], int tsize, int myarr[], int h)
 int main()
 {
     int arr[] = {5, 40, 18, 22, 28, 38, 48, 20, 8};
-
     int W = 10;
-
     int hashtable[10];
  
     for (int z = 0; z < 10; z++)
@@ -50,5 +47,4 @@ int main()
     }
     hashfunction(hashtable, 10, arr, W);
 
-    return 0;
 }
