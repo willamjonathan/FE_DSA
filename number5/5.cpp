@@ -1,10 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
  
-void hashfunction(int mytable[], int tsize, int myarr[], int N)
+void hashfunction(int mytable[], int tsize, int myarr[], int h)
 { 
     int numberofcollision = 0;
-    for (int z = 0; z < N; z++) 
+    for (int z = 0; z < h; z++) 
     {
         int d = myarr[z] % tsize; 
 
@@ -40,7 +40,7 @@ int main()
 {
     int arr[] = {5, 40, 18, 22, 28, 38, 48, 20, 8};
 
-    int A = 10;
+    int W = 10;
 
     int hashtable[10];
  
@@ -48,7 +48,7 @@ int main()
     {
         hashtable[z] = -1;
     }
-    hashfunction(hashtable, 10, arr, A);
+    hashfunction(hashtable, 10, arr, W);
 
     return 0;
 }
