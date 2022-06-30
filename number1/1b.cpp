@@ -65,7 +65,7 @@ void mystack<T>::display() {
 
 
 int main(){
- mystack<int> thestack(12);
+ mystack<int> thestack(10);
  int choice;
  while(true) {
  	cout << "\nOperations performed by Stack\n";
