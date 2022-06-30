@@ -15,8 +15,7 @@ void hashfunction(int mytable[], int myarr[], int h)
         else 
         {
             numberofcollision ++;
-            
-
+      
             for (int x = 0; x < 10; x++){
                 int t = (d + x * x) % 10; 
                 if (mytable[t] == -1)
